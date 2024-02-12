@@ -1,0 +1,324 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Adjust the gap between nav-links */
+}
+
+.nav-link {
+  display: flex;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+ 
+  align-items: center;
+ 
+}
+
+.nav-link:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  padding: 8px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/*contact*/
+
+.contact-container {
+  text-align: center;
+  color: #333;
+  padding: 50px;
+}
+.contact-container h1{
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 8px;
+  text-align: left;
+  font-weight: bold;
+  display: block;
+}
+
+.form-control,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  resize: none;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ /* text-align: left;
+  display: block;*/
+}
+
+
+/* Service css*/
+
+
+.heading_style{
+  padding: 30px 0;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: gray;
+  background-color: white;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.cards {
+  width: 100%;
+  height: auto;
+  text-align: center; /* Center the cards within the container */
+}
+
+.card {
+  margin: 5%; /* Adjust the margin based on your preference */
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: white;
+  width: 21.25%;
+  height: 400px;
+  border-radius: 12px;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  float: left;
+}
+
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05,1.05);
+}
+
+.card__img {
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card__info{
+  background-color: white;
+  border-bottom-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 16px 24px 24px 24px;
+  height: calc(400px - 235px);
+  background-color: white;
+}
+
+.card__category{
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: gray;
+  background-color: white;
+}
+
+.card__title{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+  background-color: white;
+  text-transform: capitalize;
+}
+
+.cardbutton{
+  margin-top: 5px;
+  padding: 5px 8px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: gray;
+  background-color: white;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+  
+  
+}
+
+.cardbutton:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05,1.05);
+  background-color: #fff;
+}
+
+/*Common css*/
+.home-section {
+  padding: 50px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+
+}
+
+.text-container {
+  max-width: 50%;
+}
+
+.main-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.brand-name {
+  color: #007bff;
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.btn-container {
+  margin-top: 20px;
+}
+
+.btn-get-started {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-get-started:hover {
+  background-color: #0056b3;
+}
+
+.img-container img {
+  width: 600px;
+  height: 400px;
+  animation: moveSlowly 10s linear infinite;
+}
+
+@keyframes moveSlowly {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  background-color: #f0f0f0;
+  color: black;
+  text-align: center;
+}
+
+/* Add any additional styling as needed */
+
+
+@media (max-width: 768px) {
+
+  .card{
+    float: none;
+    margin: 5%;
+    width: 90%;
+   }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    margin-bottom: 10px;
+  }
+}
