@@ -1,34 +1,53 @@
-import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./Navbar";
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
-import Courses from "./Courses";
-import Error from "./Error";
-import Footer from "./Footer";
+import React,{useState} from "react";
+import Header from "./Component/Header";
+import Footer from "./Component/Footer";
+import CreateNote from "./Component/CreateNote"
+import Note from "./Component/Note";
 
+const App=()=>{
+       
+    const [addItem,setAddItem]=useState([])
+    const addNote=(note)=>{
+    setAddItem((prevData)=>{
+        return [...prevData, note]
+    })
 
-const App = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+    }
 
-  const handleSearch = (term) => {
-    setSearchTerm(term);
-  };
+    const onDelete=(id)=>{
+        setAddItem((oldItem)=>
+           oldItem.filter((currdata,index)=>{
+               return (
+                   index!==id
+                )
+            })
+         )
 
-  return (
-    <>
-      <Navbar onSearch={handleSearch} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/courses" element={<Courses searchTerm={searchTerm} />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-      <Footer/>
-    </>
-  );
-};
+    }
+      return (
+           <>
+           <Header/>
+           <CreateNote
+           passNote={addNote}/>
+          
+           {
+            addItem.map((val,index)=>{
+               return (
+                   <Note
+                       key={index}
+                       id={index}
+                       title={val.title}
+                       content={val.content}
+                       deleteItem={onDelete}
+                    />
+                 )
+              })
+                  
+            }
+           <Footer/>
+           </>
+      )
 
-export default App;
+}
+
+export default App
